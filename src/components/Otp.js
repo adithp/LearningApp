@@ -30,7 +30,7 @@ export default function Otp({route,navigation}) {
     const otpHandlerequest = ()=> {
         if(value.length === 4) {
             setMessage('')
-            navigation.navigate('PasswordPage')
+            navigation.navigate('NamePage')
         }
         else {
             setMessage('Enter a valid Otp')
