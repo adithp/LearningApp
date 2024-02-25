@@ -1,11 +1,10 @@
 import { View, Text, SafeAreaView,StyleSheet } from 'react-native'
 import React from 'react'
 
-export default function Dashboard({route,navigation}) {
-  console.warn(route.params)
+export default function ProfilePage() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text></Text>
+
     </SafeAreaView>
   )
 }

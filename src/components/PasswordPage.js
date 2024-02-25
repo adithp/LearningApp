@@ -5,8 +5,8 @@ import React, { useState } from 'react'
 import LockIcon from '../Assets/images/password-lock.svg'
 import EyeIcon from '../Assets/images/dont-view.svg'
 
-export default function PasswordPage({navigation}) {
-
+export default function PasswordPage({route,navigation}) {
+    const {name} = route.params;
     const [validater,setValidater] = useState(false)
     const [validater1,setValidater1] = useState(false)
     const [validater2,setValidater2] = useState(false)
@@ -19,7 +19,7 @@ export default function PasswordPage({navigation}) {
     const Handlerequest = ()=> {
 		if(validater == true && validater1 == true && validater2 == true && validater3 == true && validater4 == true  ) {
             setMessage("")
-            navigation.navigate('Dashboard');
+            navigation.navigate('Dashboard',{name});
         }
         else {
             setMessage("Password does not meet requirements.")

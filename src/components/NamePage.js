@@ -7,7 +7,7 @@ export default function NamePage({navigation}) {
 	const [name,setName] = useState('')
 	const Handlerequest = ()=> {
 		if(name.length != 0) {
-			navigation.navigate('PasswordPage');
+			navigation.navigate('PasswordPage',{name});
 		}
 	}
 
