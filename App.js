@@ -21,6 +21,7 @@ import LecturesFocusIcon from './src/Assets/images/class-dark.svg'
 import LecturesUnfocusIcon from './src/Assets/images/class-light.svg'
 import ProfileFocusIcon from './src/Assets/images/profileIcon1.svg'
 import ProfileUnfocusIcon from './src/Assets/images/profileIcon.svg'
+import BottomTabNavigation from './src/components/BottomTabNavigation';
 
 
 export default function App() {
@@ -28,72 +29,13 @@ export default function App() {
 	const Tab = createBottomTabNavigator();
   const LoginStack = createNativeStackNavigator();
 
-  const  HomeTabs = () => (
-	<Tab.Navigator
-		screenOptions={({route}) => ({
-			tabBarShowLabel: false,
-			tabBarStyle: { 
-				backgroundColor: '#fff',
-				borderTopLeftRadius: 30,
-				borderTopRightRadius: 30,
-				  },
-				  
-			tabBarIcon: ({focused}) => {
-				if(route.name === 'DashboardTabs') {
-					if(focused == true) {
-						return <HomeFcousIcon />
-					}
-					else {
-						return <HomeUnfcousIcon />
-					}
-				}
-				else if (route.name === 'Lectures'){
-                       
-					if(focused == true) {
-						return <LecturesFocusIcon />
-					}
-					else {
-						return <LecturesUnfocusIcon />
-					}
-				   
-				}
-				else if (route.name === 'ProfilePage'){
-				   
-					if(focused == true) {
-						return <ProfileFocusIcon />
-					}
-					else {
-						return <ProfileUnfocusIcon />
-					}
-			}
-		}
-		})}
-		> 
-		<Tab.Screen  
-			name="DashboardTabs"                                       
-			component={Dashboard} 			
-			options={{headerShown:false,}} 
-			/>
-		<Tab.Screen  
-			name="Lectures"                                       
-			component={Lectures} 
-			options={{headerShown:false,}} 
-			/>
-		<Tab.Screen  
-			name="ProfilePage"                                       
-			component={ProfilePage} 
-			options={{headerShown:false,}} 
-			/>
-	
-	</Tab.Navigator>
-)
-
+ 
 
   return (
 	
     <NavigationContainer>
 		
-		<LoginStack.Navigator >
+		<LoginStack.Navigator initialRouteName='BottomTabHome' >
 			<LoginStack.Screen 
 					name="MobNumber" 
 					options={{headerShown:false,}} 
@@ -115,10 +57,11 @@ export default function App() {
 					component={PasswordPage} 
 					/>	
 			<LoginStack.Screen 
-					name="Dashboard" 
+					name="BottomTabHome" 
 					options={{headerShown:false,}} 
-					component={HomeTabs} 
+					component={BottomTabNavigation} 
 					/>	
+					
 			
             
 		</LoginStack.Navigator>

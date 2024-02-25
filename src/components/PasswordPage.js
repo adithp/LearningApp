@@ -19,7 +19,7 @@ export default function PasswordPage({route,navigation}) {
     const Handlerequest = ()=> {
 		if(validater == true && validater1 == true && validater2 == true && validater3 == true && validater4 == true  ) {
             setMessage("")
-            navigation.navigate('Dashboard',{name});
+            navigation.navigate('BottomTabHome',{name});
         }
         else {
             setMessage("Password does not meet requirements.")
