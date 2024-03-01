@@ -9,7 +9,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 
 import Dashboard from './Dashboard';
-import Lectures from './Lectures';
+import LecturesNav from './LecturesNav';
 import ProfilePage from './ProfilePage';
 
 
@@ -46,7 +46,7 @@ export default function BottomTabNavigation({route,navigation}) {
 						return <HomeUnfcousIcon />
 					}
 				}
-				else if (route.name === 'Lectures'){
+				else if (route.name === 'LecturesNav'){
                        
 					if(focused == true) {
 						return <LecturesFocusIcon />
@@ -75,9 +75,15 @@ export default function BottomTabNavigation({route,navigation}) {
 			options={{headerShown:false,}} 
 			/>
 		<Tab.Screen  
-			name="Lectures"                                       
-			component={Lectures} 
-			options={{headerShown:false,}} 
+			name="LecturesNav"                                       
+			component={LecturesNav} 
+			options={{title:"Today's lectures",headerTitleStyle: {
+				fontSize:14,
+				opacity:0.7
+			  },headerStyle: {
+				backgroundColor: '#efefef',
+				
+			  }}}
 			/>
 		<Tab.Screen  
 			name="ProfilePage"                                       

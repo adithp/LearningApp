@@ -1,13 +1,16 @@
 import { View, Text, Image, ScrollView, TouchableOpacity, StyleSheet  } from 'react-native'
 import React from 'react'
 
-export default function Lectures({route}) {
 
+export default function Completed({route}) {
   const {lectureData} = route.params;
 
   const renderItems = ()=> {
-    return lectureData.map((item)=> (
-      <TouchableOpacity key={item.id}>
+    
+    return lectureData.map((item) => {
+      if(item.completed == 100) {
+        return (
+          <TouchableOpacity key={item.id}>
             <View style={styles.lecturesContainer}>
 				{item.completed == 100 ? (
                 <View style={[styles.lectureImageContainer,{backgroundColor:'#62D0E9'}]}>
@@ -31,7 +34,9 @@ export default function Lectures({route}) {
                 )}
 			</View>
       </TouchableOpacity>
-     ) )
+        )
+      }
+    })
   }
  
   return (

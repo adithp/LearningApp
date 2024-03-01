@@ -10,17 +10,10 @@ import MobNumber from './src/components/MobNumber'
 import Otp from './src/components/Otp'
 import PasswordPage from './src/components/PasswordPage';
 import NamePage from './src/components/NamePage';
-import Dashboard from './src/components/Dashboard';
-import Lectures from './src/components/Lectures';
-import ProfilePage from './src/components/ProfilePage';
 
 
-import HomeFcousIcon from './src/Assets/images/Home b.svg'
-import HomeUnfcousIcon from './src/Assets/images/Home g.svg'
-import LecturesFocusIcon from './src/Assets/images/class-dark.svg'
-import LecturesUnfocusIcon from './src/Assets/images/class-light.svg'
-import ProfileFocusIcon from './src/Assets/images/profileIcon1.svg'
-import ProfileUnfocusIcon from './src/Assets/images/profileIcon.svg'
+
+
 import BottomTabNavigation from './src/components/BottomTabNavigation';
 
 
