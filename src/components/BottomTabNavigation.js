@@ -77,13 +77,7 @@ export default function BottomTabNavigation({route,navigation}) {
 		<Tab.Screen  
 			name="LecturesNav"                                       
 			component={LecturesNav} 
-			options={{title:"Today's lectures",headerTitleStyle: {
-				fontSize:14,
-				opacity:0.7
-			  },headerStyle: {
-				backgroundColor: '#efefef',
-				
-			  }}}
+			options={{headerShown:false}}
 			/>
 		<Tab.Screen  
 			name="ProfilePage"                                       

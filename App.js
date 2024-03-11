@@ -15,6 +15,7 @@ import NamePage from './src/components/NamePage';
 
 
 import BottomTabNavigation from './src/components/BottomTabNavigation';
+import Study from './src/components/Study';
 
 
 export default function App() {

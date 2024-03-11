@@ -2,7 +2,7 @@ import { View, Text, Image, ScrollView, TouchableOpacity, StyleSheet  } from 're
 import React from 'react'
 
 
-export default function Ongoing({route}) {
+export default function Ongoing({route,navigation}) {
   const {lectureData} = route.params;
 
   const renderItems = ()=> {
@@ -10,7 +10,7 @@ export default function Ongoing({route}) {
     return lectureData.map((item) => {
       if(item.completed != 100) {
         return (
-          <TouchableOpacity key={item.id}>
+          <TouchableOpacity key={item.id} onPress={()=> navigation.navigate('Study')}>
             <View style={styles.lecturesContainer}>
 				{item.completed == 100 ? (
                 <View style={[styles.lectureImageContainer,{backgroundColor:'#62D0E9'}]}>
